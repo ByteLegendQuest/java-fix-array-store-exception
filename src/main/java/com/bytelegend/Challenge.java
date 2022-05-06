@@ -1,7 +1,5 @@
 package com.bytelegend;
 
-import java.util.Arrays;
-
 public class Challenge {
     public static void main(String[] args) {
         System.out.println(incrementNumbersInCsv("1,2,3"));
@@ -10,16 +8,9 @@ public class Challenge {
 
     public static String incrementNumbersInCsv(String str) {
         Object[] numbers = str.split(",");
-        int[] number = new int[numbers.length];
         for (int i = 0; i < numbers.length; ++i) {
-            number[i] = Integer.parseInt(numbers[i].toString()) + 1;
+            numbers[i] = Integer.parseInt(numbers[i].toString()) + 1;
         }
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < number.length; i++) {
-            sb.append(number[i]);
-            if (i != number.length - 1) sb.append(",");
-        }
-        str = sb.toString();
-        return str;
+        return String.join(",", (String[]) numbers);
     }
 }
