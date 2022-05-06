@@ -14,6 +14,12 @@ public class Challenge {
         for (int i = 0; i < numbers.length; ++i) {
             number[i] = Integer.parseInt(numbers[i].toString()) + 1;
         }
-        return Arrays.toString(number).replace("[", "").replace("]", "");
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < number.length; i++) {
+            sb.append(number[i]);
+            if (i != number.length - 1) sb.append(",");
+        }
+        str = sb.toString();
+        return str;
     }
 }
