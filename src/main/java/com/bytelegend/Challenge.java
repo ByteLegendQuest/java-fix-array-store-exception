@@ -8,10 +8,9 @@ public class Challenge {
 
     public static String incrementNumbersInCsv(String str) {
         Object[] numbers = str.split(",");
-        String[] ns = new String[numbers.length];
         for (int i = 0; i < numbers.length; ++i) {
-            ns[i] = String.valueOf(Integer.parseInt(numbers[i].toString()) + 1);
+            numbers[i] = Integer.parseInt(numbers[i].toString()) + 1;
         }
-        return String.join(",", (String[]) ns);
+        return String.join(",", (String[]) numbers);
     }
 }
