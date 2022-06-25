@@ -9,12 +9,12 @@ public class Challenge {
     public static String incrementNumbersInCsv(String str) {
         String[] numbers = str.split(",");
         String result = "";
-        String[] finaly = new String[numbers.length];
 
         for (int i = 0; i < numbers.length; ++i) {
-            finaly[i] = String.valueOf(Integer.parseInt(numbers[i]) + 1);
+            numbers[i] = String.valueOf(Integer.parseInt(numbers[i]) + 1);
+            System.out.println(numbers[i]);
         }
 
-        return result.join(", ", finaly);
+        return result.join(", ", numbers);
     }
 }
