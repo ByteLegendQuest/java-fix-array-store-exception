@@ -12,9 +12,8 @@ public class Challenge {
 
         for (int i = 0; i < numbers.length; ++i) {
             numbers[i] = String.valueOf(Integer.parseInt(numbers[i]) + 1);
-            System.out.println(numbers[i]);
         }
 
-        return result.join(", ", numbers);
+        return result.join(",", numbers);
     }
 }
