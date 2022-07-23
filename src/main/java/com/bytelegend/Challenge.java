@@ -1,7 +1,5 @@
 package com.bytelegend;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
+
 public class Challenge {
     public static void main(String[] args) {
         System.out.println(incrementNumbersInCsv("1,2,3"));
@@ -9,12 +7,10 @@ public class Challenge {
     }
 
     public static String incrementNumbersInCsv(String str) {
-        List<String> result = Arrays.stream(str.split(","))
-                .map(Integer::parseInt)
-                .map(number -> number + 1)
-                .map(String::valueOf)
-                .collect(Collectors.toList());
-
-        return String.join(",", result);
+        Object[] numbers = str.split(",");
+        for (int i = 0; i < numbers.length; ++i) {
+            numbers[i] = Integer.parseInt(numbers[i].toString()) + 1;
+        }
+        return String.join(",", (String[]) numbers);
     }
 }
