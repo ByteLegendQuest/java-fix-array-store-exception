@@ -7,10 +7,10 @@ public class Challenge {
     }
 
     public static String incrementNumbersInCsv(String str) {
-        Object[] numbers = str.split(","); //通过特定的分隔符对字符串进行切片
+        Object[] numbers = str.split(",");
         for (int i = 0; i < numbers.length; ++i) {
-            numbers[i] = String.valueOf(Integer.parseInt(numbers[i].toString()) + 1);
+            numbers[i] = Integer.parseInt(numbers[i].toString()) + 1;
         }
-        return String.join(",", (String[]) numbers); //使用指定的分隔符拼接字符串
+        return String.join(",", (String[]) numbers);
     }
 }
