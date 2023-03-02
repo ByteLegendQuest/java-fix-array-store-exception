@@ -14,4 +14,3 @@ public class Challenge {
         return String.join(",", numbers);
     }
 }
-}
