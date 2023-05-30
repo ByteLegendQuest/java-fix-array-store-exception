@@ -7,10 +7,10 @@ public class Challenge {
     }
 
     public static String incrementNumbersInCsv(String str) {
-        Object[] numbers = str.split(",");
-        for (int i = 0; i < numbers.length; ++i) {
-            numbers[i] = Integer.parseInt(numbers[i].toString()) + 1;
+        String[] numbers = str.split(",");
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = String.valueOf(Integer.parseInt(numbers[i]) + 1);
         }
-        return String.join(",", (String[]) numbers);
+        return String.join(",", numbers);
     }
 }
