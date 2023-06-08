@@ -13,8 +13,9 @@ public class Challenge {
         }
         String returnString = "";
         if (numbers.length > 0) returnString += numbers[0].toString();
-        for (int i = 1; i < numbers.length; ++i)
+        for (int i = 1; i < numbers.length; ++i) {
             returnString += "," + numbers[i].toString();
+        }
         return returnString;
     }
 }
