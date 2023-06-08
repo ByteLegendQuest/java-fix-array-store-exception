@@ -11,6 +11,10 @@ public class Challenge {
         for (int i = 0; i < numbers.length; ++i) {
             numbers[i] = Integer.parseInt(numbers[i].toString()) + 1;
         }
-        return String.join(",", (String[]) numbers);
+        String returnString = "";
+        if (numbers.length > 0) returnString += numbers[0].toString();
+        for (int i = 1; i < numbers.length; ++i)
+            returnString += "," + numbers[i].toString();
+        return returnString;
     }
 }
