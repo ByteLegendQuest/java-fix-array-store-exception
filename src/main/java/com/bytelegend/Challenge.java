@@ -15,4 +15,3 @@ public class Challenge {
         return String.join(",", (String[]) numbers);
     }
 }
-}
